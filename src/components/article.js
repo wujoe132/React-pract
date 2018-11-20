@@ -1,53 +1,49 @@
 import React, { Component } from "react";
 import Card from "./card"
 
-
+//** Component ==> class 类的繼承。 */
 class Article extends Component {
-    constructor(props){
-        super(props);
-        // this.state = {
-        //     //** the place allow to put database */
-        //     //** this ==> article */
-        //     //** state ==> object */
-        //     article1: {
-        //         title: "Blog1",
-        //         content: "This is Blog 1"
-        //     },
-        //     article2: {
-        //         title: "Blog2",
-        //         content: "This is Blog 2"
-        //     },
-        //     article3: {
-        //         title: "Blog3",
-        //         content: "This is Blog 3"
-        //    }
-    // }
-}
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         //** the place allow to put database */
+    //         //** this ==> article */
+    //         //** state ==> object */
+    //         article1: {
+    //             title: "Blog1",
+    //             content: "This is Blog 1"
+    //         },
+    //         article2: {
+    //             title: "Blog2",
+    //             content: "This is Blog 2"
+    //         },
+    //         article3: {
+    //             title: "Blog3",
+    //             content: "This is Blog 3"
+    //        }
+    // } 
+// } 
 //** 動態性增加了, 根據我放在state裡變化 */
 
     render(){
         //  console.log(this.state);
-        // console.log(this.props);
-        const blogs = [{
-                        title: "Blog1",
-                        content: "This is Blog 1"
-                    }, 
-                    {
-                        title: "Blog2",
-                        content: "This is Blog 2"
-                    }, 
-                    {
-                        title: "Blog3",
-                        content: "This is Blog 3"
-                    }];
+        console.log(this.props);
+        // const blogs = [{
+        //                 title: "Blog1",
+        //                 content: "This is Blog 1"
+        //             }, 
+        //             {
+        //                 title: "Blog2",
+        //                 content: "This is Blog 2"
+        //             }, 
+        //             {
+        //                 title: "Blog3",
+        //                 content: "This is Blog 3"
+        //             }];
 
         return (
             <div>
-                {blogs.map(blog => {
-                    return (
-                        <Card title={ blog.title } content={ blog.content } />
-                    )
-                })} 
+               <Card articles= {this.props.articles } />
             </div>
         )
         // return(
