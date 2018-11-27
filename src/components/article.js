@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./card"
+import Card from "./card/card"
 
 //** Component ==> class 类的繼承。 */
 class Article extends Component {
@@ -40,10 +40,10 @@ class Article extends Component {
         //                 title: "Blog3",
         //                 content: "This is Blog 3"
         //             }];
-
+        //** pass a parent function to child */
         return (
             <div>
-               <Card articles= {this.props.articles } />
+               <Card articles= {this.props.articles } handleClick={ this.props.handleClick } handleDoubleClick= { this.props.handleDoubleClick } />
             </div>
         )
         // return(
